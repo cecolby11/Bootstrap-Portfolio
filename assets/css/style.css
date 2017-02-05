@@ -1,7 +1,22 @@
-.row {
-  border: pink thick solid;
-} 
+/*page structure*/
 
 .navbar-header {
   border: purple thick solid;
+}
+
+.row {
+
+} 
+
+footer {
+  border: red thin solid;
+  width: 100%;
+  height: 90px;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+}
+
+.page-header {
+
 }
