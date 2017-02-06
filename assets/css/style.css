@@ -45,6 +45,35 @@
   padding: 0; /*remove default padding*/
 }
 
+.container_main{
+  padding: 0; /*remove extra space around middle section*/
+}
+.container {
+  max-width: 960px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #4aaaa5;
+  font-family: 'Georgia', Times, Times New Roman, serif;
+  font-weight: bold;
+}
+
+footer {
+  width: 100%;
+  height: 90px;
+  /*position: absolute;
+  bottom: 0;*/
+  margin-top: 40px;
+  padding: 33px;
+  text-align: center;
+  font-size: smaller;
+  background-color: #666;
+  color: #ccc;
+  border-top: 8px solid #4aaaa5;
+}
+
+/* main content - general */
+
 .panel {
   padding: 30px;
   border-radius: 0;
@@ -62,39 +91,15 @@
   padding-left: 20px;
   padding-right: 20px;
 }
-.container_main{
-  padding: 0; /*remove extra space around middle section*/
-}
-.container {
-  max-width: 960px;
-}
-
 
 .panel h1,h2,h3,h4,h5,h6{
   margin-top:0;
 }
-h1, h2, h3, h4, h5, h6 {
-  color: #4aaaa5;
-  font-family: 'Georgia', Times, Times New Roman, serif;
-  font-weight: bold;
-}
-
-
-footer {
-  width: 100%;
-  height: 90px;
-  /*position: absolute;
-  bottom: 0;*/
-  margin-top: 40px;
-  padding: 33px;
-  text-align: center;
-  font-size: smaller;
-  background-color: #666;
-  color: #ccc;
-  border-top: 8px solid #4aaaa5;
-}
 
 /* social links */
+.social_panel {
+  min-width: 270px;
+}
 
 .social_panel ul {
   margin: 0 auto; /*remove default container margin and recenter */
@@ -121,28 +126,31 @@ footer {
 }
 
 
-/*main content */
+/* about me elements */
 
-.main_content p{
+.about_me p{
   line-height: 1.9;
   font-size: medium;
   overflow: auto;
-  margin-left: auto;
   }
-.main_content p a {
+.about_me a {
   color: #5D2E16;
   text-decoration: none;
 }
-.main_content p a:hover {
+.about_me p a:hover {
   color: #AA6B4A;
 }
-.main_content img {
+.about_me .thumbnail {
+  padding: none;
+  border: none;
+  border-radius: 0;
   float: left;
   width: 200px;
-  object-fit: cover;/* crop and center */
+  object-fit: cover;/* crop and center*/ 
+  margin-right: 20px;
 }
 
-/*form elements */
+/* contact form elements */
 .btn,
 .btn:hover,
 .btn:active,
@@ -157,4 +165,40 @@ footer {
 form label {
   font-weight: normal;
   font-size: medium;
+}
+
+/* project gallery elements */
+
+.project .thumbnail {
+  overflow: auto;
+  position: relative;
+  padding: 0; /*remove default padding */
+  border-radius: 0;
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.project .thumbnail:hover,
+.project .thumbnail:focus,
+.project .thumbnail:active {
+  border-color: #4aaaa5;
+}
+.project .thumbnail img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /*crop and center*/
+}
+.project .caption {
+  z-index: 2;
+  width: 100%;
+  background: #4aaaa5;
+  position: absolute;
+  bottom: 10px;
+  padding: 15px 0 20px 0;
+}
+.project .caption h4 {
+  font-weight: normal;
+  font-size: 1.3em;
+  margin: 0;
+  color: #fff;
 }
