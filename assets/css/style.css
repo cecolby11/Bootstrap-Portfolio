@@ -45,11 +45,9 @@
   padding: 0; /*remove default padding*/
 }
 
-.container_main{
-  padding: 0; /*remove extra space around middle section*/
-}
 .container {
   max-width: 960px;
+  width: auto;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -96,13 +94,24 @@ footer {
   margin-top:0;
 }
 
+/*applies to project and social thumbnails */
+a.thumbnail:hover,
+a.thumbnail:focus,
+a.thumbnail:active {
+  border-color: #4aaaa5;
+}
+
 /* social links */
 .social_panel {
   min-width: 270px;
 }
+.social_panel h3{
+  font-size: 1.6em; /*default size is too large*/
+}
 
 .social_panel ul {
   margin: 0 auto; /*remove default container margin and recenter */
+  overflow: auto;
 }
 .social_panel li {
   float:left; /* align in a row */
@@ -115,14 +124,18 @@ footer {
 .social_panel li:last-child{
   padding-right: 0;
 }
-
 .social_panel .thumbnail {
   padding: 0;
-  margin: 0; /*remove bottom margin;*/
-  width: 60px;
-  height: 60px;
-  line-height: 0;
+  width: 62px;
+  height: 62px;
   border-radius: 0;
+}
+.social_panel .container {
+  max-width: 230px;
+  float: left;
+}
+.social_panel .col-* {
+  padding: auto;
 }
 
 
@@ -145,9 +158,10 @@ footer {
   border: none;
   border-radius: 0;
   float: left;
-  width: 200px;
+  width: 100%;
+  max-height: 300px;
+  min-height: 250px;
   object-fit: cover;/* crop and center*/ 
-  margin-right: 20px;
 }
 
 /* contact form elements */
@@ -178,11 +192,7 @@ form label {
   margin-left: 20px;
   margin-right: 20px;
 }
-.project .thumbnail:hover,
-.project .thumbnail:focus,
-.project .thumbnail:active {
-  border-color: #4aaaa5;
-}
+
 .project .thumbnail img {
   width: 100%;
   height: auto;
