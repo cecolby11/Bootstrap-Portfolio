@@ -111,12 +111,14 @@ a.thumbnail:active {
 
 .social_panel ul {
   margin: 0 auto; /*remove default container margin and recenter */
+  text-align: center;
   overflow: auto;
+  float: left;
 }
 .social_panel li {
-  float:left; /* align in a row */
-  padding-left: 5px;
-  padding-right: 5px;
+  display: inline-block; /* align in a row but not floated left*/
+  padding-left: 2.5px;
+  padding-right: 2.5px;
 }
 .social_panel li:first-child{
   padding-left: 0;
@@ -125,17 +127,10 @@ a.thumbnail:active {
   padding-right: 0;
 }
 .social_panel .thumbnail {
-  padding: 0;
-  width: 62px;
-  height: 62px;
   border-radius: 0;
-}
-.social_panel .container {
-  max-width: 230px;
-  float: left;
-}
-.social_panel .col-* {
-  padding: auto;
+  border: none;
+  width: 62px;
+  padding: 0;
 }
 
 
