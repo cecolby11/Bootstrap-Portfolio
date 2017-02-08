@@ -168,13 +168,14 @@ a.thumbnail:active {
 .about_me .thumbnail {
   border-radius: 0;
   border: none;
+  height: 390px;
   width: 100%;
-  max-height: 350px;
   margin: auto; /*center in col*/
   object-fit: cover; /*center and crop as needed*/
   object-position: 50% 40%; /*shift up */
   padding-bottom: 20px;
 }
+
 
 /* contact form elements */
 .btn,
