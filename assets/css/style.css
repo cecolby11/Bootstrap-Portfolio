@@ -144,19 +144,20 @@ a.thumbnail:active {
 .about_me a {
   color: #5D2E16;
   text-decoration: none;
+  border: ;
 }
 .about_me p a:hover {
   color: #AA6B4A;
 }
 .about_me .thumbnail {
-  padding: none;
-  border: none;
   border-radius: 0;
-  float: left;
+  border: none;
   width: 100%;
-  max-height: 300px;
-  min-height: 250px;
-  object-fit: cover;/* crop and center*/ 
+  max-height: 350px;
+  margin: auto; /*center in col*/
+  object-fit: cover; /*center and crop as needed*/
+  object-position: 50% 40%; /*shift up */
+  padding-bottom: 20px;
 }
 
 /* contact form elements */
