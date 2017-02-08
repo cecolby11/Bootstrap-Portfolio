@@ -16,8 +16,11 @@
   background-color: #fff;
   border-bottom: 2px solid #ccc;
 }
-
-.navbar-brand {
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  background-color: #4aaaa5; /*default transparent*/
+}
+.navbar-default .navbar-brand {
   background-color: #4aaaa5;
   height: 100%;
   padding: 0;
@@ -42,7 +45,16 @@
   padding-right: 0; /*keep default BS right-alignment*/
 }
 .navbar-right li a {
-  padding: 0; /*remove default padding*/
+  background: #fff;
+  padding: 0;
+}
+
+/*collapsed content uses : .in */
+.navbar-collapse.in li {
+    background: #fff;
+    padding: 30px 0 30px 30px;
+    border-bottom: #ddd 1px solid;
+    z-index: 2;
 }
 
 .container {
@@ -132,6 +144,10 @@ a.thumbnail:active {
   width: 62px;
   padding: 0;
 }
+.social_panel img:hover {
+  width: 61px;
+  border-radius: 1px;
+}
 
 
 /* about me elements */
@@ -208,3 +224,29 @@ form label {
   margin: 0;
   color: #fff;
 }
+
+/*animations*/
+
+.project .thumbnail {
+   -webkit-transition: all 0.6s ease;
+     -moz-transition: all 0.6s ease;
+       -o-transition: all 0.6s ease;
+      -ms-transition: all 0.6s ease;
+          transition: all 0.6s ease;
+}
+.project .thumbnail:nth-child(even):hover {
+    -webkit-transform: rotate(-3deg);
+     -moz-transform: rotate(-3deg);
+       -o-transform: rotate(-3deg);
+      -ms-transform: rotate(-3deg);
+          transform: rotate(-3deg);
+}
+.project .thumbnail:nth-child(odd):hover {
+    -webkit-transform: rotate(3deg);
+     -moz-transform: rotate(3deg);
+       -o-transform: rotate(3deg);
+      -ms-transform: rotate(3deg);
+          transform: rotate(3deg);
+}
+
+

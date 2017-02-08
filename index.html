@@ -8,30 +8,46 @@
   <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+  <!-- started looking into how to make toggle menu work! need more knowledge but it's at least functional-->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
 </head>
 
 
 <body>
 <div class="page"> <!-- page wrapper  -->
   <!-- navbar  -->
-  <nav class="navbar navbar-default"> 
+  <nav class="navbar navbar-default" role="navigation"> 
     <div class="container">
 
       <!-- navbar header -->
       <div class="navbar-header">
-        <div class="navbar-brand"><h1>Casey Colby</h1></div>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav-links" aria-expanded="false">
+          <span class="sr-only"><!-- for screen reader -->Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div class="navbar-brand">
+          <h1>Casey Colby</h1>
+        </div>
+
       </div> 
       <!-- /.navbar header -->
 
+
       <!-- navbar right menu -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <div class="collapse navbar-collapse" id="main-nav-links">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">About</a></li>
+          <li><a data-toggle="tab" href="#">About</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul> 
       </div>
-      <!-- /.navbar-right -->
+      <!-- /.navbar right menu-->
 
     </div> 
     <!-- /.container -->
@@ -144,5 +160,6 @@
   </footer>
 
 </div> <!-- /.page wrapper -->
+
 </body>
 </html>
